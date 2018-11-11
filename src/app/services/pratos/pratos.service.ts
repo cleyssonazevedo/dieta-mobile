@@ -31,4 +31,8 @@ export class PratosService {
             }
         ] as Array<Prato>;
     }
+
+    getNomesListPratos() {
+        return this.getListPratos().map((prato) => prato.nome);
+    }
 }
