@@ -1,0 +1,25 @@
+<TabView androidTabsPosition="bottom">
+
+    <page-router-outlet
+        *tabItem="{title: 'Visualizar', iconSource: getIconSource('home')}"
+        name="homeTab">
+    </page-router-outlet>
+
+    <page-router-outlet
+        *tabItem="{title: 'Cadastrar', iconSource: getIconSource('browse')}"
+        name="cadastrarTab">
+    </page-router-outlet>
+
+    <page-router-outlet
+        *tabItem="{title: 'Histórico', iconSource: getIconSource('calendar')}"
+        name="historicoTab">
+    </page-router-outlet>
+
+    <!-- 
+
+    <page-router-outlet
+        *tabItem="{title: 'Histórico', iconSource: getIconSource('search')}"
+        name="searchTab">
+    </page-router-outlet> -->
+
+</TabView>

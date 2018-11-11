@@ -1,0 +1,17 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Visualizar"></Label>
+</ActionBar>
+
+<RadCalendar
+	eventsViewMode="Inline" 
+	selectionMode="Single" 
+	viewMode="Month"
+	transitionMode="Stack"
+	locale="pt-BR" 
+	
+	(dateSelected)="onDateSelected($event)" 
+	(dateDeselected)="onDateDeselected($event)" 
+	(navigatedToDate)="onNavigatedToDate($event)" 
+	(navigatingToDateStarted)="onNavigatingToDateStarted($event)"
+	(viewModeChanged)="onViewModeChanged($event)"
+></RadCalendar>
