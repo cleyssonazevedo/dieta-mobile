@@ -2,4 +2,5 @@
     <Label class="action-bar-title" text="Visualizar"></Label>
 </ActionBar>
 
-<Label text="Olá, estou na página inicial"></Label>
+<Label *ngIf="getData" text="Lista de pratos cadastrados"></Label>
+<Label *ngFor="let item of getData" [text]="item.prato"></Label>

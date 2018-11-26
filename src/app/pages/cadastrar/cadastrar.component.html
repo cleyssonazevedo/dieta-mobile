@@ -1,5 +1,9 @@
 <ActionBar class="action-bar">
-    <Label class="action-bar-title" text="Cadastro de dieta"></Label>
+	<Label class="action-bar-title" text="Cadastro de dieta"></Label>
+	<ActionItem (tap)="save()"
+		ios.systemIcon="3" ios.position="right"
+		android.systemIcon="ic_menu_save" android.position="actionBar"
+	></ActionItem>
 </ActionBar>
 
 <RadDataForm tkExampleTitle tkToggleNavButton [source]="cadastro" class="m-top-20">

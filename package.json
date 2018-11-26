@@ -8,12 +8,12 @@
       "version": "5.0.0"
     }
   },
-  "description": "NativeScript Application",
+  "description": "Aplicativo dieta mobile",
   "license": "MIT",
-  "repository": "<fill-your-repository-here>",
+  "repository": "https://github.com/cleyssonazevedo/dieta-mobile",
   "scripts": {
-    "lint": "tslint \"src/**/*.ts\"",
     "start": "tns preview",
+    "lint": "tslint \"src/**/*.ts\"",
     "build:android": "tns build android"
   },
   "dependencies": {
@@ -27,25 +27,25 @@
     "@angular/platform-browser-dynamic": "~6.1.0",
     "@angular/router": "~6.1.0",
     "nativescript-angular": "~6.2.0",
-    "nativescript-localstorage": "^2.0.0",
+    "nativescript-couchbase": "^1.0.18",
     "nativescript-theme-core": "~1.0.4",
     "nativescript-ui-calendar": "^3.9.0",
-    "nativescript-ui-dataform": "^3.8.0",
+    "nativescript-ui-dataform": "3.7.4",
     "reflect-metadata": "~0.1.10",
     "rxjs": "~6.2.0",
     "tns-core-modules": "~5.0.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
+    "@angular/compiler-cli": "~6.1.0",
     "@nativescript/schematics": "~0.3.0",
+    "@ngtools/webpack": "~6.2.0",
     "codelyzer": "~4.5.0",
     "nativescript-dev-sass": "~1.6.0",
     "nativescript-dev-typescript": "~0.7.0",
     "nativescript-dev-webpack": "~0.17.0",
+    "tns-platform-declarations": "^5.0.3",
     "tslint": "~5.11.0",
-    "typescript": "~2.7.2",
-    "@angular/compiler-cli": "~6.1.0",
-    "@ngtools/webpack": "~6.2.0"
-  },
-  "readme": "NativeScript Application"
+    "typescript": "~2.7.2"
+  }
 }

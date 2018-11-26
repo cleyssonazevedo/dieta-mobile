@@ -4,6 +4,8 @@ import { ObservableArray } from 'tns-core-modules/data/observable-array';
 import { Dieta } from '~/app/models';
 import { PratosService } from '~/app/services';
 
+import * as dialogs from 'tns-core-modules/ui/dialogs';
+
 @Component({
     moduleId: module.id,
     selector: 'Cadastrar',
@@ -40,5 +42,15 @@ export class CadastrarComponent implements OnInit {
 
     get getPratos() {
         return this.pratos.getNomesListPratos();
+    }
+
+    save() {
+        this.pratos.setData(this.cadastro);
+
+        dialogs.alert({
+            message: 'Dados Salvos'
+        }).then(() => {
+            this.cadastro = new Dieta();
+        });
     }
 }
