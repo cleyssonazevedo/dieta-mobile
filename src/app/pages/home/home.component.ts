@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { defaultIfEmpty, toArray } from 'rxjs/operators';
-import { Dieta } from '~/app/models';
+import { interval } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { PratosService } from '~/app/services';
+
+// tslint:disable-next-line:ban-types
+declare var zonedCallback: Function;
 
 @Component({
     moduleId: module.id,
@@ -9,17 +12,27 @@ import { PratosService } from '~/app/services';
     templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-    private data: Array<Dieta>;
-
+    data: number;
     constructor(
-        private service: PratosService
+        public service: PratosService
     ) { }
 
     ngOnInit() {
-        this.data = this.service.getData();
+        this.Teste.subscribe((data) => {
+            zonedCallback(() => {
+                this.data = data;
+            });
+        });
     }
 
-    get getData() {
-        return this.data;
+    get getTotal() {
+        return this.service.getTotalCalorias()
+            .pipe(
+                tap((total) => console.log('Retornou', total))
+            );
+    }
+
+    get Teste() {
+        return interval(1000);
     }
 }

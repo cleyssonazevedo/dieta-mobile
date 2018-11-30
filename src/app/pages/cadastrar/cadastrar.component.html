@@ -7,13 +7,31 @@
 </ActionBar>
 
 <RadDataForm tkExampleTitle tkToggleNavButton [source]="cadastro" class="m-top-20">
-    <TKEntityProperty tkDataFormProperty name="prato" index="0"
+    <TKEntityProperty tkDataFormProperty name="prato"
         displayName="Escolha um prato"
         [valuesProvider]="getPratos">
-            <TKPropertyEditor tkEntityPropertyEditor type="Picker"></TKPropertyEditor>
+            <TKPropertyEditor tkEntityPropertyEditor type="Picker">
+            </TKPropertyEditor>
     </TKEntityProperty>
 
-    <TKEntityProperty tkDataFormProperty name="quantidade" index="1"
+    <TKEntityProperty tkDataFormProperty name="quantidade"
         displayName="Digite a quantidade máxima por dia">
+    </TKEntityProperty>
+
+    <TKEntityProperty tkDataFormProperty name="domingo" displayName="Domingo">
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="segunda" displayName="Segunda">
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="terca" displayName="Terça">
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="quarta" displayName="Quarta">
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="quinta" displayName="Quinta">
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="sexta" displayName="Sexta">
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="sabado" displayName="Sábado">
+    </TKEntityProperty>
+    <TKEntityProperty tkDataFormProperty name="calorias" hidden="true">
     </TKEntityProperty>
 </RadDataForm>

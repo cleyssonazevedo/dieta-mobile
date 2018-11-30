@@ -2,5 +2,8 @@
     <Label class="action-bar-title" text="Visualizar"></Label>
 </ActionBar>
 
-<Label *ngIf="getData" text="Lista de pratos cadastrados"></Label>
-<Label *ngFor="let item of getData" [text]="item.prato"></Label>
+<StackLayout>
+    <Label style="font-size: 20; width: auto; text-align: center;"
+    [text]="data"
+    ></Label>
+</StackLayout>
